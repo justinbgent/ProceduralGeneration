@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c272tjvo5cs52"]
+
+[ext_resource type="Texture2D" uid="uid://dyw2vseoh11y4" path="res://Sprites/Circle.png" id="1_xmxgh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_an6lt"]
+radius = 32.0
+
+[node name="Player" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.564706, 0.486275, 0, 1)
+texture_filter = 1
+texture = ExtResource("1_xmxgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_an6lt")
